@@ -1,5 +1,5 @@
 import React from 'react';
-import {Home, Review, ViewReviews, HowThisWorks} from './pages'
+import {Home, Review, ViewReviews} from './pages'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {Header, Footer} from './display'
 

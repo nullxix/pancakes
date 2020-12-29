@@ -51,6 +51,8 @@ export default function Review() {
                                             padding: '0.5em',
                                             border: '8px solid black'
                                         }}
+                                        value={data['comment']}
+                                        onChange={handleChange}
                                     />
                                 </div>
                                 <div>
