@@ -1,9 +1,7 @@
-import PancakeData from './pancakeDataRetriever/PancakeData'
 
-import pancakeDataRetriever from './pancakeDataRetriever/pancakeDataRetriever'
+import pancakeDataRetriever from './pancakeDataRetriever'
 
 
 export {
-    PancakeData,
     pancakeDataRetriever
 }
