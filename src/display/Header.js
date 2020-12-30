@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -40,7 +40,7 @@ const LogoText = styled.p`
 
     text-decoration: none;
 `;
-const Link = styled(Text)`
+const StyledLink = styled(Text)`
     transition: 0.2s;
 
     &:hover {
@@ -59,16 +59,18 @@ export default function Header(props){
     return(
         <>
             <Container>
-                <LogoText>L🥞go</LogoText>
+                <Link to='/'style={{ textDecoration: "none" }}>
+                    <LogoText>L🥞go</LogoText>
+                </Link>
                 <LinkContainer>
                     <NavLink to="/" style={{ textDecoration: "none" }}>
-                        <Link>How it works</Link>                    
-                    </NavLink>
-                    <NavLink to="/review" style={{ textDecoration: "none" }}>
-                        <Link>Reviews</Link>                    
+                        <StyledLink>How it works</StyledLink>                    
                     </NavLink>
                     <NavLink to="/all-reviews" style={{ textDecoration: "none" }}>
-                        <Link>Make a Review</Link>                    
+                        <StyledLink>Reviews</StyledLink>                    
+                    </NavLink>
+                    <NavLink to="/review" style={{ textDecoration: "none" }}>
+                        <StyledLink>Make a Review</StyledLink>                    
                     </NavLink>
                 </LinkContainer>
             </Container>

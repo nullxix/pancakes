@@ -1,5 +1,6 @@
 import React from 'react'
-import { Page, Title, Spacer, Button, Paragraph, Section, PinkThing } from '../../display';
+import { Page, Title, Button, Paragraph, Section, PinkThing } from '../../display';
+import { Block, Wrapper } from '../../spacers'
 import styled from 'styled-components'
 import Step from './Step'
 
@@ -11,6 +12,7 @@ const SideBySide = styled.div`
     padding: 20px 40px;
 ` 
 
+
 export default function Home() {
     return (
         <Page>
@@ -20,11 +22,11 @@ export default function Home() {
                 verticalCenter
                 horizontalCenter
             >
-                <Spacer/>
+                <Block/>
                     <Title>
                         Eat Your Pancakes You Filthy Animal
                     </Title>
-                <Spacer/>
+                <Block/>
             </Section>
 
             {/* How It Works */}
@@ -32,7 +34,8 @@ export default function Home() {
             <Section>
 
                 {/* PINK PART */}
-                
+            
+
                 <PinkThing>
                     <SideBySide>
                         <div style={{
@@ -41,15 +44,15 @@ export default function Home() {
                             alignItems: 'center',
                             justifyContent: 'center',
                         }}>
-                            <Paragraph>
+                            <Wrapper>
                                 <Title inverted alignLeft>How It Works</Title>
-                                <div>
+                                <Paragraph>
                                     Is your life boring? Quarantine got you down? Try a pancake, without the mess! Download our specialized, carefully crafted pancake, Print it out, make a review! It’s that simple! 
-                                </div>
+                                </Paragraph>
                                 <div style={{padding: '20px 0px'}}>
-                                    <Button.StrongLink inverted>Try it Out!</Button.StrongLink>
+                                    <Button.StrongLink to='/review' inverted>Try it Out!</Button.StrongLink>
                                 </div>
-                            </Paragraph>
+                            </Wrapper>
                         </div>
                     </SideBySide>
                 </PinkThing>
