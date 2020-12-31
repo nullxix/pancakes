@@ -1,7 +1,8 @@
 import React from 'react'
-import { PancakeData } from '../dataClasses'
+// eslint-disable-next-line
+// import { PancakeData } from '../dataClasses'
 import styled from 'styled-components'
-import { Block, Wrapper } from '../spacers'
+import { Wrapper } from '../spacers'
 
 const SideBySide = styled.div`
     display: flex;
@@ -63,8 +64,8 @@ function MiniReview({review}){
                     pancakeCount > 0 ?
                     Array(Math.min(pancakeCount, 9))
                         .fill('')
-                        .map(() => <img width='60px' src='http://www.pngplay.com/wp-content/uploads/2/Pancake-Transparent-Images.png'/>)
-                    : <img width='60px' src='https://static.wikia.nocookie.net/teen-titans-go/images/1/19/Red_X2.png'/>
+                        .map(() => <img width='60px' alt="pancake" src='http://www.pngplay.com/wp-content/uploads/2/Pancake-Transparent-Images.png'/>)
+                    : <img width='60px' src='https://static.wikia.nocookie.net/teen-titans-go/images/1/19/Red_X2.png' alt="pancake"/>
                 }
             </div>
             <div>
