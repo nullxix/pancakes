@@ -1,0 +1,19 @@
+type PancakeUrls {
+    raw: String
+    full: String
+    regular: String
+    small: String
+    thumb: String
+}
+
+type PancakeUnsplashUser {
+    username: String
+    name: String
+    credit_url: String
+}
+
+type Pancake {
+  urls: PancakeUrls
+  unsplash_id: String @unique
+  unsplash_user: PancakeUnsplashUser
+}
